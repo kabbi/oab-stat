@@ -1,0 +1,23 @@
+{
+  "parser"  : "babel-eslint",
+  "extends" : "airbnb",
+  "env"     : {
+    "browser" : true
+  },
+  "plugins": [
+    "babel"
+  ],
+  "globals" : {
+    "__DEV__"      : false,
+    "__PROD__"     : false,
+    "__DEBUG__"    : false,
+    "__DEBUG_NEW_WINDOW__" : false,
+    "__BASENAME__" : false
+  },
+  "rules": {
+    "no-param-reassign": ["error", { "props": false }],
+    "quote-props": "off",
+    "babel/new-cap": "error",
+    "new-cap": "off"
+  }
+}
