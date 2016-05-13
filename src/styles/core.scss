@@ -1,6 +1,7 @@
 :global {
   @import 'base';
   @import 'vendor/normalize';
+  @import 'vendor/bootswatch/variables';
 
   // Some best-practice CSS that's useful for most apps
   // Just remove them if they're not what you want
@@ -20,5 +21,21 @@
   *:before,
   *:after {
     box-sizing: inherit;
+  }
+
+  // Custom global bootstrap fixes
+  .list-group button:focus {
+    outline: none;
+  }
+
+  // Monkey-patch react-select to look like bootstrap field
+  .has-error {
+    .Select-arrow-zone {
+      // Fix for
+      padding-right: 36px;
+    }
+    .Select-control {
+      border-color: $brand-danger;
+    }
   }
 }

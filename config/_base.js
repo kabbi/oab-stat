@@ -3,9 +3,18 @@ import _debug from 'debug';
 import path from 'path';
 import { argv } from 'yargs';
 
-const debug = _debug('app:config:_base');
+const debug = _debug('oab:config:_base');
 const config = {
   env : process.env.NODE_ENV || 'development',
+
+  // ----------------------------------
+  // Application Settings
+  // ----------------------------------
+  jwt_shared_secret: 'We3#k#RIp)@pZ',
+  facade_connection_string: [
+    'Server=10.211.55.3',
+    'Database=FenixOAB',
+  ].join(';'),
 
   // ----------------------------------
   // Project Structure
